@@ -67,12 +67,15 @@
       "reflinks": true
     },
     "reflinks": [
+      "assemble",
       "generate",
       "helpers",
-      "verb",
-      "assemble",
+      "templates",
       "update",
-      "templates"
+      "verb",
+      "base-questions",
+      "ask-when",
+      "verb-readme-generator"
     ]
   }
 }
