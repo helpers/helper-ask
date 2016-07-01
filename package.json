@@ -1,0 +1,78 @@
+{
+  "name": "helper-ask",
+  "description": "Async helper that prompts the user for a value and uses the answer as context for rendering the template.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/helpers/helper-ask",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "helpers/helper-ask",
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/helper-ask/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "LICENSE"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "ask-when": "^0.1.1",
+    "get-value": "^2.0.6",
+    "isobject": "^2.1.0",
+    "mixin-deep": "^1.1.3"
+  },
+  "devDependencies": {
+    "base-questions": "^0.6.6",
+    "engine-base": "^0.1.2",
+    "gulp-format-md": "^0.1.9",
+    "mocha": "^2.5.3",
+    "templates": "^0.23.0"
+  },
+  "keywords": [
+    "answer",
+    "ask",
+    "cli",
+    "context",
+    "helper",
+    "helpers",
+    "interaction",
+    "prompt",
+    "question",
+    "render",
+    "template",
+    "templates",
+    "terminal"
+  ],
+  "verb": {
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "related": {
+      "list": [
+        "handlebars-helpers",
+        "template-helpers"
+      ]
+    },
+    "lint": {
+      "reflinks": true
+    },
+    "reflinks": [
+      "generate",
+      "helpers",
+      "verb",
+      "assemble",
+      "update",
+      "templates"
+    ]
+  }
+}
