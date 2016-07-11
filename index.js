@@ -18,12 +18,23 @@ var ask = require('ask-when');
  */
 
 module.exports = function(app) {
+  var cached = {};
+
   return function(name, message, options, cb) {
     var args = [].slice.call(arguments, 1);
     cb = args.pop();
 
     if (typeof cb !== 'function') {
       throw new TypeError('expected a callback function');
+    }
+
+    if (cached.hasOwnProperty(name)) {
+      var answer = get(cached, name);
+      if (typeof answer === 'undefined') {
+        answer = '';
+      }
+      cb(null, answer);
+      return;
     }
 
     app = app || this.app;
@@ -47,8 +58,12 @@ module.exports = function(app) {
         cb(err);
         return;
       }
+
+      var answer = get(answers, name);
+      cached[name] = answer;
+
       app.data(answers);
-      cb(null, get(answers, name));
+      cb(null, answer);
     });
   };
 };
