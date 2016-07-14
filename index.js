@@ -50,7 +50,8 @@ module.exports = function(app) {
       opts.message = args.pop();
     }
 
-    options = merge({}, this.options, this.context, opts, options);
+    options = merge({}, this.options, options, opts);
+    options.data = merge({}, this.context, options.data);
     options.save = false;
 
     ask.when(this.app, name, options, function(err, answers) {
