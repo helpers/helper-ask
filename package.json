@@ -1,7 +1,7 @@
 {
   "name": "helper-ask",
   "description": "Async helper that prompts the user for a value and uses the answer as context for rendering the template.",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "homepage": "https://github.com/helpers/helper-ask",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "helpers/helper-ask",
