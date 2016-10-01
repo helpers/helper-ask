@@ -6,12 +6,11 @@
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "helpers/helper-ask",
   "bugs": {
-    "url": "https://github.com/jonschlinkert/helper-ask/issues"
+    "url": "https://github.com/helpers/helper-ask/issues"
   },
   "license": "MIT",
   "files": [
-    "index.js",
-    "LICENSE"
+    "index.js"
   ],
   "main": "index.js",
   "engines": {
@@ -22,7 +21,9 @@
   },
   "dependencies": {
     "ask-when": "^0.1.4",
+    "debug": "^2.2.0",
     "get-value": "^2.0.6",
+    "has-value": "^0.3.1",
     "isobject": "^2.1.0",
     "mixin-deep": "^1.1.3"
   },
@@ -67,15 +68,14 @@
       "reflinks": true
     },
     "reflinks": [
+      "ask-when",
       "assemble",
+      "base-questions",
       "generate",
-      "helpers",
       "templates",
       "update",
       "verb",
-      "base-questions",
-      "ask-when",
-      "verb-readme-generator"
+      "verb-generate-readme"
     ]
   }
 }
