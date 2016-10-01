@@ -4,8 +4,8 @@ require('mocha');
 var assert = require('assert');
 var templates = require('templates');
 var questions = require('base-questions');
-var ask;
 var app;
+var ask;
 
 describe('helper-ask', function() {
   beforeEach(function() {
@@ -32,14 +32,14 @@ describe('helper-ask', function() {
     }
   });
 
-  it('should ', function(cb) {
-    var page = app.page('foo', {content: '<%= ask("name") %>'});
+  it('should not ask when already answered', function(cb) {
+    var page = app.page('foo', {content: '<%= ask("author.name") %><%= ask("author.name") %>'});
     app.option('askWhen', 'not-answered');
-    app.data('name', 'Brian');
+    app.data('author.name', 'Brian');
 
     app.render(page, function(err, view) {
       if (err) return cb(err);
-      assert.equal(view.content, 'Brian');
+      assert.equal(view.content, 'BrianBrian');
       cb();
     });
   });
